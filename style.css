@@ -1,0 +1,7 @@
+body{
+    height: 36rem;
+    background-image: linear-gradient(to bottom right, rgb(19, 189, 27) , rgb(245, 243, 245) ,rgb(209, 209, 36));
+}
+.row{
+    padding: 1rem;
+}

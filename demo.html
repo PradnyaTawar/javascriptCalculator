@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Calculator</title>
+<script>
+function submitBtnClicked() {
+let num1 = document.getElementById("num1").value;
+let num2 = document.getElementById("num2").value;
+let operator = document.getElementById("operator").value;
+let answer = eval(num1 + operator + num2);
+document.getElementById("answer").value = answer;
+}
+function clearAnswer() {
+document.getElementById("answer").value = "";
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="row"><div class="col-lg-4 col-lg-offset-4">
+    <h2>JavaScript Calculator</h2>
+    <hr />
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-4">
+    <label for="desc">Number-1</label>
+    <input type="number" class="form-control" id="num1" value="14" required
+    onchange="clearAnswer()">
+    </div>
+    <div class="col-lg-4">
+    <label for="desc">Operator</label>
+    <select id="operator" class="form-control" onchange="clearAnswer()">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+    </select>
+    </div>
+    <div class="col-lg-4">
+    <label for="desc">Number-2</label>
+    <input type="number" class="form-control" id="num2" value="2" required
+    onchange="clearAnswer()">
+    </div>
+    </div>
+    <br />
+    <div class="row">
+    <div class="col-lg-12">
+    <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block"
+    id='submit-btn' onclick="submitBtnClicked()">Submit</button>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+    <label for="desc">Answer:</label> <input type="text" class="form-control"
+    id="answer" readonly>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
